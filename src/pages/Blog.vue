@@ -149,6 +149,11 @@ query($page: Int) {
 import { Pager } from "gridsome";
 export default {
   name: "BlogPage",
+  metaInfo() {
+    return {
+      title: "博客列表",
+    };
+  },
   components: {
     Pager,
   },

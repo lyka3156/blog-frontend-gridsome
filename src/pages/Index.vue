@@ -32,9 +32,11 @@
               >
                 <pre style="font-family: 微软雅黑">{{ post.title }}</pre>
               </div>
-              <div class="markdown-body" style="padding-top: 20px">
-                {{ post.content }}
-              </div>
+              <div
+                class="markdown-body"
+                style="padding-top: 20px"
+                v-html="mdToHtml(post.content)"
+              ></div>
             </div>
           </div>
         </div>
@@ -79,10 +81,22 @@ query {
 </page-query>
 
 <script>
-import New from "./New";
+import MarkdownIt from "markdown-it";
+const md = new MarkdownIt();
 export default {
   metaInfo: {
     title: "Hello, world!",
+  },
+  metaInfo() {
+    return {
+      title: "最新动态",
+    };
+  },
+  // 将markdown文件转换成html
+  methods: {
+    mdToHtml(markdown) {
+      return md.render(markdown);
+    },
   },
   computed: {
     post() {

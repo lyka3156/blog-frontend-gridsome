@@ -205,6 +205,11 @@ query($page: Int) {
 import { Pager } from "gridsome";
 export default {
   name: "ProjectPage",
+  metaInfo() {
+    return {
+      title: "开源项目",
+    };
+  },
   components: {
     Pager,
   },
