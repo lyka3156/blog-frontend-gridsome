@@ -13,7 +13,7 @@ import 'mavon-editor/dist/markdown/github-markdown.min.css'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 
-import Vant from 'vant'
+// import Vant from 'vant'
 // import 'vant/lib/vant-css/index.css'
 
 import "./assets/css/index.css"
@@ -24,6 +24,15 @@ import 'dayjs/locale/zh-cn'
 dayjs.locale('zh-cn') // use locale
 
 export default function (Vue, { router, head, isClient }) {
+
+  Vue.mixin({
+    data() {
+      return {
+        GRIDSOME_API_URL: process.env.GRIDSOME_API_URL
+      }
+    }
+  })
+
   // Set default layout as a global component
   Vue.component('Layout', DefaultLayout)
 
@@ -42,7 +51,7 @@ export default function (Vue, { router, head, isClient }) {
   })
 
 
-  Vue.use(Vant)
+  // Vue.use(Vant)
   Vue.use(ElementUI)
   Vue.use(mavonEditor)
 
