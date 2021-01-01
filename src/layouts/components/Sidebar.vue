@@ -100,14 +100,13 @@
 </template>
 
 <script>
-// import { constantRouterMap } from "../../router";
 export default {
   name: "SidebarPage",
   data() {
     return {
       constantRouterMap: [
         {
-          path: "/new",
+          path: "/",
           meta: {
             icon: "el-icon-star-off",
             title: "最新动态",
