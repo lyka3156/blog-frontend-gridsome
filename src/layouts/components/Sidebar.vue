@@ -112,13 +112,13 @@ export default {
             title: "最新动态",
           },
         },
-        {
-          path: "/social",
-          meta: {
-            icon: "el-icon-mobile-phone",
-            title: "社交圈",
-          },
-        },
+        // {
+        //   path: "/social",
+        //   meta: {
+        //     icon: "el-icon-mobile-phone",
+        //     title: "社交圈",
+        //   },
+        // },
         {
           path: "/blog",
           meta: {

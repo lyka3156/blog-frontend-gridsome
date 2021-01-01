@@ -10,7 +10,15 @@
       color: rgb(255, 255, 255);
     "
   >
-    <div style="position: absolute; top: 20px; right: 20px; z-index: 2">
+    <div
+      style="
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 2;
+        display: none;
+      "
+    >
       <button
         type="button"
         class="el-button el-tooltip el-button--default is-circle"
