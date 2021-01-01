@@ -69,6 +69,9 @@ export default {
   name: "HeadPage",
   computed: {
     general() {
+      if (!this.$page) {
+        return {};
+      }
       return this.$page.general.edges[0].node;
     },
   },

@@ -83,6 +83,9 @@ export default {
   name: "NewPage",
   computed: {
     post() {
+      if (!this.$page) {
+        return {};
+      }
       return this.$page.posts.edges[0].node;
     },
   },
